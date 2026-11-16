@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>يوم مريومهه الخاص 🎂</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@1,600&display=swap');
+:root{--bg1:#fbe6ee;--bg2:#e9d4f5;--ink:#4a2145;--mut:#85607f;--card:#ffffffb8;--line:#d9a9c9;--acc:#c2417f;--glow:#c2417f55;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a1233;--bg2:#0e0716;--ink:#f6e6f2;--mut:#bf9bbb;--card:#ffffff14;--line:#ffffff33;--acc:#f08ac0;--glow:#f08ac066;color-scheme:dark}}
+:root[data-theme="dark"]{--bg1:#2a1233;--bg2:#0e0716;--ink:#f6e6f2;--mut:#bf9bbb;--card:#ffffff14;--line:#ffffff33;--acc:#f08ac0;--glow:#f08ac066;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box}
+body{margin:0;height:100%;overflow:hidden;color:var(--ink);font-family:'Amiri',serif;background:radial-gradient(circle at 30% 20%,var(--bg1),var(--bg2))}
+button{font-family:inherit;cursor:pointer;color:inherit}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:24px 18px;overflow:auto;opacity:0;visibility:hidden;transition:opacity .9s,visibility .9s}
+.scene>:first-child{margin-top:auto}.scene>:last-child{margin-bottom:auto}
+.scene.on{opacity:1;visibility:visible}
+.eyebrow{letter-spacing:4px;font-size:12px;color:var(--mut);font-family:'Playfair Display',serif;direction:ltr}
+h1,h2{font-weight:700;margin:10px 0;line-height:1.3;text-shadow:0 0 28px var(--glow)}
+h1{font-size:clamp(36px,9vw,64px)}h2{font-size:clamp(30px,7vw,48px)}
+p{color:var(--mut);font-size:19px;line-height:2}
+.btn{margin-top:22px;background:var(--card);border:1px solid var(--line);padding:12px 30px;border-radius:40px;font-size:18px;backdrop-filter:blur(8px);transition:.3s}
+.btn:hover{box-shadow:0 0 24px var(--glow);transform:translateY(-2px)}
+.pw{width:230px;max-width:90%;margin-top:8px;padding:12px;font-size:26px;text-align:center;letter-spacing:4px;direction:ltr;background:var(--card);border:1px solid var(--line);border-radius:14px;color:var(--ink);font-family:'Playfair Display',serif}
+.pw.bad{animation:sk .4s}@keyframes sk{25%,75%{transform:translateX(-8px)}50%{transform:translateX(8px)}}
+.cd{display:flex;gap:12px;direction:ltr;margin:20px 0;flex-wrap:wrap;justify-content:center}
+.cd div{width:74px;padding:12px 0;background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:30px;font-family:'Playfair Display',serif}
+.cd small{display:block;font-size:11px;color:var(--mut);font-family:'Amiri',serif}
+#giftbox{background:none;border:0;font-size:110px;animation:fl 2.4s ease-in-out infinite;filter:drop-shadow(0 0 20px var(--glow))}
+#giftbox.open{animation:pop .8s forwards}
+@keyframes fl{50%{transform:translateY(-14px) rotate(4deg)}}
+@keyframes pop{to{transform:scale(2.6);opacity:0}}
+.paper{max-width:560px;width:100%;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;backdrop-filter:blur(10px);box-shadow:0 10px 50px #0004}
+.paper p{color:var(--ink);text-align:right;min-height:11em;font-size:18px;line-height:2.1;margin:8px 0;white-space:pre-line}
+.wall{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:760px;margin:14px 0}
+.pol{width:140px;background:#fff;padding:8px 8px 22px;box-shadow:0 8px 24px #0005;transform:rotate(var(--r));transition:.35s;color:#3a2a35}
+.pol:hover{transform:rotate(0) scale(1.12);z-index:2}
+.pol label{display:grid;place-items:center;height:130px;background:#f1e6ee;cursor:pointer;font-size:12px;color:#85607f;position:relative;overflow:hidden}
+.pol img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pol span{display:block;font-size:14px;margin-top:6px;outline:none}
+#wish{min-height:7em;font-size:24px;color:var(--ink);max-width:520px;transition:opacity .4s}
+.big{font-size:clamp(26px,6.2vw,44px);font-weight:700;line-height:1.8;min-height:1.8em;max-width:640px}
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;max-width:640px;width:100%;margin:14px 0}
+.env{position:relative;height:138px;background:var(--card);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(8px);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;padding:10px;transition:.3s;transform:rotate(var(--r));color:var(--ink);font-size:17px;font-weight:700;font-family:inherit}
+.env .seal{position:absolute;top:16px;font-size:36px}
+.env:hover{transform:rotate(0) translateY(-6px);box-shadow:0 0 24px var(--glow)}
+.env small{color:var(--mut);font-size:10px;font-family:'Playfair Display',serif;letter-spacing:2px;direction:ltr;font-weight:400}
+.env.shake{animation:sk .5s}
+.kb{background:none;border:0;font-size:26px;opacity:.4;transition:.3s}.kb:hover{opacity:1;transform:rotate(20deg)}
+#cmod{position:fixed;inset:0;z-index:20;background:#000a;display:none;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top,0px) + 14px) 14px calc(env(safe-area-inset-bottom,0px) + 14px);overflow:auto;text-align:center}
+#cmod.on{display:flex}
+#cmod .paper{max-height:100%;overflow:auto}
+.pred{border-bottom:1px dashed var(--line);padding:10px 0;text-align:right;font-size:20px;color:var(--ink);opacity:0;transition:.6s}.pred.on{opacity:1}
+#toast{position:fixed;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);left:50%;transform:translateX(-50%);background:var(--ink);color:var(--lit1,#fff);padding:10px 20px;border-radius:20px;z-index:40;display:none;max-width:90%;text-align:center}
+.tg{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:10px;z-index:9;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:4px 10px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<button class="tg" id="tg" aria-label="تبديل الوضع">🌓</button>
+
+<section class="scene on" id="s0">
+  <div class="eyebrow">★ SOMETHING SPECIAL ★</div>
+  <h1 dir="ltr" style="font-family:'Playfair Display',serif;font-style:italic">The most special dayy</h1>
+  <div class="cd" id="cd"><div><b>00</b><small>يوم</small></div><div><b>00</b><small>ساعة</small></div><div><b>00</b><small>دقيقة</small></div><div><b>00</b><small>ثانية</small></div></div>
+  <p dir="ltr" style="font-family:'Playfair Display',serif;font-style:italic">from your fav Eng.</p>
+  <button class="btn" data-go="6">افتحي المفاجأة ←</button>
+</section>
+
+<section class="scene" id="s6">
+  <div class="eyebrow">PASSWORD</div>
+  <h2>قبل ما تدخلي…</h2>
+  <p>اكتبي الباسورد عشان تفتحي المفاجأة 🔐<br><b style="color:var(--ink)">أول يوم قربنا فيه؟</b><br><small>اكتبيه أرقام بس، من غير فواصل</small></p>
+  <input class="pw" id="pw" inputmode="numeric" autocomplete="off" placeholder="• • • • • • •" aria-label="الباسورد">
+  <div id="pm" style="min-height:2em;color:var(--acc);font-size:18px"></div>
+  <button class="btn" id="pb">تأكيد ←</button>
+</section>
+
+<section class="scene" id="s1">
+  <div class="eyebrow">TAP TO OPEN</div>
+  <button id="giftbox" aria-label="افتحي الهدية">🎁</button>
+  <p>اضغطي على الهدية…</p>
+</section>
+
+<section class="scene" id="s2">
+  <h2>كل سنة وأنتِ طيبة 🎂</h2>
+  <div class="paper"><p id="letter"></p><button class="btn" id="l2" style="display:none" data-go="3">شوفي الذكريات ←</button></div>
+</section>
+
+<section class="scene" id="s3">
+  <div class="eyebrow">TIME CAPSULE</div>
+  <h2>كبسولة الزمن 🗝️</h2>
+  <p style="margin:0;font-size:16px">أربع رسايل مقفولة… اختاري واحدة</p>
+  <div class="caps">
+    <button class="env" data-k="past" style="--r:-2deg"><span class="seal">💌</span>رسالة من الي بيحب عيون المدرسه<small>SCHOOL EYES FAN</small></button>
+    <button class="env" data-k="now" style="--r:1.5deg"><span class="seal">💜</span>رسالة من الEX<small>THE EX</small></button>
+    <button class="env" data-k="future" id="fe" style="--r:-1deg"><span class="seal" id="fs">🔒</span>افتحيها في عيد ميلادك الجاي<small id="fl">LOCKED</small></button>
+    <button class="env" data-k="pred" style="--r:2deg"><span class="seal">🔮</span>توقعات السنة الجاية<small>PREDICTIONS</small></button>
+  </div>
+  <button class="kb" id="key" aria-label="مفتاح مخفي">🗝️</button>
+  <button class="btn" data-go="4">كملي ←</button>
+</section>
+
+<section class="scene" id="s4">
+  <div class="eyebrow">BIRTHDAY WISHES</div>
+  <h2>أمنياتي ليكي</h2>
+  <div id="wish"></div>
+  <button class="btn" id="nw">أمنية تانية ✨</button>
+  <button class="btn" data-go="5" style="margin-top:10px">النهاية ←</button>
+</section>
+
+<section class="scene" id="s5">
+  <div class="big" id="end" dir="ltr" style="font-family:'Playfair Display',serif;font-style:italic"></div>
+  <p id="end2"></p>
+  <button class="btn" data-go="0">شوفي المفاجأة تاني ↺</button>
+</section>
+
+<div id="cmod"></div><div id="toast"></div>
+
+<script>
+// ===== عدّلي من هنا =====
+const BIRTHDAY='2026-11-16T00:00:00';
+const LETTER=`مريووووممممممممم عامله ايهه عارف ان ده يوم غريب عليكي مش عارفه تفرحيي بسبب كل الي انتي فيهه بس في اليوم ده حاولتت حاولتت اعمل حاجه غريبهه كشكل جديد وبتاع عارف ان الفكره اتحرقت بس مفيش حلول جديده وانا مش عارف اشوفكك 😔😔
+
+المهممم كل سنه وانتي طيبه يا عسل بجد بجد انتي اقرب حد ليا وهتفضلي طول عمرك اقرب حد ليا مش هعرف مهما حصل ابعد او افكر اني ابعد اصلااااا🫵🥰🥰
+
+عايز اقولك في يوم زي ده انك فعلا حد هيطلع ناجح في حياتهه سيبك من اي حاجه بتحصل دلوقتي دي شويه محاربات شيطان علشان تتعبي اكتر واكتر بس صدقيني هتوصلي لحاجه كويسه اوي في حياتكك واتحداكييي
+
+عايز اقولك كمان ان ده تقريبا تالت عيد ميلاد ليكي وانا قرييب منككك واههه عارف انك كده كده مش فاكرهه تاريخ بدايه قربناا بس حطيتها رخامهههه
+المهمم يعني ان ده مش هيبقا اخر واحد علشان بجد بجد دي اكتر حاجه ممتعه في حياتي اصلا اني اعملك حاجه في عيد ميلادككك
+بس اتمنى السنه الي جايه يكوون معاياا ماتيريال احطهااا مش زي كل سنههه بنزل حاجات ساده منغير صوررر😠😠😠
+
+كل سنه وانتي طيبه وجميله واقرب حد لياااا❤️❤️`;
+const WISHES=['بتمنالك سنه جديده تحل كل مشاكل القدام','بتمنالك سنه هاديه تعرفي تعملي الي نفسك فيهه','بتمنالك تفضلي جمبي علشان دي احسن حاجه هتعمليها لنفسك','بتمنالك تفضلي تعرفي تقتنعيي انك احلى واحده في الحياه'];
+const ENDING='Happy birthday to the sweetest 20st girl ever 🫵❤️❤️';
+// ========================
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+$('#tg').onclick=()=>{const r=document.documentElement;r.dataset.theme=getComputedStyle(r).colorScheme==='dark'?'light':'dark'};
+function tw(el,t,sp,cb){let i=0;el.textContent='';(function n(){el.textContent=t.slice(0,i++);if(i<=t.length)setTimeout(n,sp);else cb&&cb()})()}
+function go(n){$$('.scene').forEach(s=>s.classList.remove('on'));$('#s'+n).classList.add('on');
+  if(n==2){$('#l2').style.display='none';tw($('#letter'),LETTER,16,()=>$('#l2').style.display='block');burst()}
+  if(n==5){$('#end2').style.opacity=0;tw($('#end'),ENDING,90,()=>$('#end2').style.opacity=1);burst()}
+  if(n==1){$('#giftbox').className='';$('#giftbox').style.opacity=1}}
+$$('[data-go]').forEach(b=>b.onclick=()=>go(+b.dataset.go));
+// password
+const PASSWORD='1632024';let bad=0;
+function chk(){const v=$('#pw').value.replace(/[٠-٩]/g,c=>'٠١٢٣٤٥٦٧٨٩'.indexOf(c)),d=v.replace(/\D/g,'');
+  if(d===PASSWORD||d==='16032024'){$('#pm').textContent='';burst();return go(1)}
+  bad++;const p=$('#pw');p.classList.remove('bad');void p.offsetWidth;p.classList.add('bad');
+  $('#pm').textContent=bad>2?'لسه غلط 😅 جربي تاني (أرقام بس، من غير فواصل)':'مش ده الباسورد، فكري تاني 😅'}
+$('#pb').onclick=chk;$('#pw').addEventListener('keydown',e=>{if(e.key==='Enter')chk()});
+// countdown
+function tick(){let d=Math.max(0,new Date(BIRTHDAY)-Date.now())/1000;
+  const v=[d/86400,d%86400/3600,d%3600/60,d%60].map(x=>String(Math.floor(x)).padStart(2,'0'));
+  $$('#cd b').forEach((b,i)=>b.textContent=v[i])}
+tick();setInterval(tick,1000);
+// gift
+$('#giftbox').onclick=e=>{e.currentTarget.className='open';burst();setTimeout(()=>go(2),900)};
+// time capsule
+const NEXT_BDAY='2027-11-16T00:00:00';
+const CAP={
+ past:['رسالة من الي بيحب عيون المدرسه','FROM: SCHOOL EYES\u0027 BIGGEST FAN',`هاايي عيون المدرسه سمعت اننا بفينا قريبين مش فاهم ازاي دي كانت حاجه مستحيله بالنزبالي اصلا كان فكره اني اكلمك حاجه صعبه مووت اصلا مش فاهم ازاي قبلتي تكلميني عايز اقولك ان فعلا فعلا انتي حلوه اوي وانا بجد بجد اتجننت لما شوفتك وهموت واوصلك واديني عرفت اكلمك وابقا كمان حد قريب منك ازاي معرففشش بس بجد بجد مش مستوعب ومبسوط موت انك في حياتي واننا سوا في الحياه ديي`],
+ now:['رسالة من الEX','FROM: THE EX',`هااي ماي اكسس عايز اقولك اني فخور بيكي اوي اوي انك واقفه لغايه النهارده على رجلك حتى لو مش قادره وتعبانه ومش طايقه حدد وقاعده كذا يوم متكلمينيش وسايباني خايف ومغضوض عليكي موت بس عادي فداكي يعني عندي كام حد في حياتي اخاف عليه اصلا
+
+المهم عايز اقولك اني فخور بيكي و مبسوط بحياتي معاكي و بوجودك حتى لو مبترديش برضوا بحس بوجودك واني لو اي وقت دخلت الشات وصيحت هلاقي حد يطبطب حتى لو مش فاهم ومعرفش يسمع وحتى لو مش قادر يتكلم عايز اقولك اني عارف ومقدر الي انتي فيه وعارف ان صعب تردي عليا اصلا وانك تعبانه فانا مش هتدايق ولا اقدر اتدايق منك اقولك حاجهه من كام يوم كنت متدايق منك بس حرفيا انا مش فاكر النهارده كنت متدايق من ايه عارفه ليه؟
+علشان دماغي على طول متسستمه ان مريم مبنتدايقش منهااا المهم عايز اقولك ان كيرلس بتاع دلوقتي وبتاع بعدين وبتاع كل يوم هيفضل جنبك وعمره ما هيفكر انك حد وحش وبيتقل عليه وهتفضلي الشخص المفضل عنده طول الوقت يا اجمل من تم ال ٢٠ سنه 🫵♥️♥️`],
+ future:['رسالة المستقبل','OPENED ON: NEXT BIRTHDAY',`هايي مريم الي بعد سنه عايز اقولك اني فخور بيكي من السنه الي فاتت (على اساس مفتحتيهاش دلوقتي 🫣)
+
+عايز اقولك مهما كنتي دخلتي قسم ايه او انا كمان دخلت قسم ايه فانا فخور بوجودك وبانك هناا في المكان الي وصلتيله مهما كان ايه عايز اقولك كمان اني مبسوط باقل حاجهه انتي حساها مش انجاز نفزتيها في السنه دي
+عايز اقولك ان كيرلس بتاع السنه الي فاتت واعدني ان مهما حصل في حياته هتفضلي المفضله بتاعته فابقي قوليلي عمل كده ولا لا
+و عايز اقولك انك كنتي وهتفضلي اجمل واحلى واحده في الحياه واحن واحده على عيلتها واهلها وكل الناس الي حواليهاا كل سنه وانتي طيبه يا اجمل من يتم ال٢١ سنه 🫵♥️`]};
+const PRED=['هتعدّي مواقف كانت شايلاكي هم، وتطلعي منها أقوى.','هتضحكي من قلبك أكتر من أي سنة فاتت.','هتحققي حاجة كنتي فاكراها مستحيلة.','هتفاجأي بخبر حلو مش متوقع.','هتفضلي أقرب حد ليا، ده مش توقع، ده وعد.'];
+const cm=$('#cmod');let unl=Date.now()>=new Date(NEXT_BDAY);
+const dleft=()=>Math.ceil((new Date(NEXT_BDAY)-Date.now())/864e5);
+$('#fl').textContent=unl?'READY':'LOCKED · '+dleft()+' DAYS';
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(e.h);e.h=setTimeout(()=>e.style.display='none',3200)}
+function cclose(){cm.classList.remove('on');cm.innerHTML=''}
+cm.onclick=e=>{if(e.target===cm)cclose()};
+document.querySelectorAll('.env').forEach(b=>b.onclick=()=>{const k=b.dataset.k;
+  if(k==='pred'){cm.innerHTML='<div class="paper"><div class="eyebrow">PREDICTIONS</div><h2>توقعات السنة الجاية 🔮</h2><div id="pl"></div><button class="btn" id="cc">إغلاق</button></div>';cm.classList.add('on');$('#cc').onclick=cclose;
+    PRED.forEach((t,i)=>{const d=document.createElement('div');d.className='pred';d.textContent=(i+1)+'. '+t;$('#pl').append(d);setTimeout(()=>d.classList.add('on'),400+i*800)});return}
+  if(k==='future'&&!unl){b.classList.remove('shake');void b.offsetWidth;b.classList.add('shake');return toast('مقفولة 🔒 باقي '+dleft()+' يوم على عيد ميلادك الجاي (ولو بتدوري على مفتاح، فتشي كويس)')}
+  const c=CAP[k];cm.innerHTML='<div class="paper"><div class="eyebrow">'+c[1]+'</div><h2>'+c[0]+'</h2><p id="cx"></p><button class="btn" id="cc">إغلاق</button></div>';cm.classList.add('on');$('#cc').onclick=cclose;tw($('#cx'),c[2],Math.max(8,Math.min(40,11000/c[2].length)))});
+let kc=0;$('#key').onclick=()=>{kc++;if(unl)return toast('المفتاح معاكي من الأول 😉');if(kc<3)return toast('المفتاح بيتحرك… كمان '+(3-kc));
+  unl=true;$('#fs').textContent='🔓';$('#fl').textContent='UNLOCKED';toast('لقيتي المفتاح! الرسالة اتفتحت 💜')};
+// wishes
+let wi=0;function showWish(){const w=$('#wish');w.style.opacity=0;setTimeout(()=>{w.textContent=WISHES[wi++%WISHES.length];w.style.opacity=1},350)}
+$('#nw').onclick=showWish;showWish();
+// particles + confetti
+const cv=$('#fx'),cx=cv.getContext('2d');let S=[],C=[];
+function rs(){cv.width=innerWidth;cv.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<70;i++)S.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2+.5,v:Math.random()*.4+.1,p:Math.random()*6});
+function burst(){const c=['#f08ac0','#ffd6ec','#c9a2ff','#fff'];for(let i=0;i<120;i++)C.push({x:innerWidth/2,y:innerHeight/2,vx:(Math.random()-.5)*14,vy:Math.random()*-12-2,s:Math.random()*7+3,c:c[i%4],a:1})}
+(function f(t){cx.clearRect(0,0,cv.width,cv.height);const col=getComputedStyle(document.documentElement).getPropertyValue('--acc');
+  S.forEach(s=>{s.y-=s.v;if(s.y<-5)s.y=cv.height+5;cx.globalAlpha=.35+.35*Math.sin(t/700+s.p);cx.fillStyle=col;cx.beginPath();cx.arc(s.x,s.y,s.r,0,7);cx.fill()});
+  C.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.28;p.a-=.007;cx.globalAlpha=Math.max(p.a,0);cx.fillStyle=p.c;cx.fillRect(p.x,p.y,p.s,p.s*.6)});
+  C=C.filter(p=>p.a>0);requestAnimationFrame(f)})(0);
+</script>
+</body>
+</html>
